@@ -1,0 +1,637 @@
+<!--[if lt IE 9]><script src="https://cdn01.jotfor.ms/js/vendor/flashcanvas.js?3.3.42265" type="text/javascript"></script><![endif]-->
+<script src="https://cdn02.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.42265" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/jSignature.min.noconflict.js?3.3.42265" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/jotform.signaturepad.js?3.3.42265" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.42265" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.42265" type="text/javascript"></script>
+<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.42265" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.42265" type="text/javascript"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+<script src="https://cdn03.jotfor.ms/js/payments/validategateways.js?v=3.3.42265" type="text/javascript"></script>
+<script src="https://js.jotform.com/vendor/postMessage.js?3.3.42265" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/s/umd/40e5901ba7c/for-widgets-server.js?v=3.3.42265" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/s/umd/40e5901ba7c/for-sign-form-integration.js?v=3.3.42265" type="text/javascript" defer></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = true;
+	JotForm.newPaymentUI = true;
+	JotForm.useJotformSign = "Yes";
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+
+	JotForm.init(function(){
+	/*INIT-START*/
+if (window.JotForm && JotForm.accessible) $('input_16').setAttribute('tabindex',0);
+      JotForm.setPhoneMaskingValidator( 'input_17_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_22').setAttribute('tabindex',0);
+      JotForm.setCustomHint( 'input_22', 'Type here...' );
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("29", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("29", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); });
+if (window.JotForm && JotForm.accessible) $('input_31').setAttribute('tabindex',0);
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("32", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("32", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); });
+      JotForm.alterTexts(undefined);
+	/*INIT-END*/
+	});
+
+//    JotForm.prepareCalculationsOnTheFly([null,{"name":"withdrawalForm","qid":"1","text":"Withdrawal Form","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},null,null,null,null,null,null,null,null,null,null,null,null,{"name":"name","qid":"15","text":"Name","type":"control_fullname"},{"name":"studentId","qid":"16","text":"Student ID","type":"control_textbox"},{"name":"phoneNumber","qid":"17","text":"Phone Number","type":"control_phone"},{"name":"email","qid":"18","subLabel":"example@example.com","text":"Email","type":"control_email"},{"name":"address","qid":"19","text":"Address","type":"control_address"},null,{"name":"status","qid":"21","text":"Status","type":"control_radio"},{"name":"whatIs","qid":"22","text":"What is the reason for your withdrawal?","type":"control_textarea"},null,{"name":"haveYou","qid":"24","text":"Have you already talked to your class adviser?","type":"control_radio"},null,{"name":"input26","qid":"26","text":"\nAll of the student's information can be found in the portal.\n\n\nWithdrawing during the first week in school will be eligible for refund.\n\n\nIf the student withdraws after the first week, fees will not be refunded.\n\n\nYou need to contact a financial aid prior to withdrawing from the school.\n","type":"control_text"},{"name":"typeA27","qid":"27","text":"Terms and Conditions","type":"control_widget"},{"name":"signature","qid":"28","text":"Signature","type":"control_signature"},{"name":"dateSigned","qid":"29","text":"Date Signed","type":"control_datetime"},{"name":"registrarsOffice","qid":"30","text":"Registrar's Office Use Only","type":"control_collapse"},{"name":"withdrawnBy","qid":"31","text":"Withdrawn By","type":"control_textbox"},{"name":"withdrawalDate","qid":"32","text":"Withdrawal Date","type":"control_datetime"},{"name":"areYou33","qid":"33","text":"Are you planning to return to the school in the future?","type":"control_radio"},{"name":"wouldYou","qid":"34","text":"Would you like to discuss your relationship to other students, teachers, or staff?","type":"control_radio"},{"name":"reminders","qid":"35","text":"Reminders","type":"control_head"}]);
+//    setTimeout(function() {
+// JotForm.paymentExtrasOnTheFly([null,{"name":"withdrawalForm","qid":"1","text":"Withdrawal Form","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},null,null,null,null,null,null,null,null,null,null,null,null,{"name":"name","qid":"15","text":"Name","type":"control_fullname"},{"name":"studentId","qid":"16","text":"Student ID","type":"control_textbox"},{"name":"phoneNumber","qid":"17","text":"Phone Number","type":"control_phone"},{"name":"email","qid":"18","subLabel":"example@example.com","text":"Email","type":"control_email"},{"name":"address","qid":"19","text":"Address","type":"control_address"},null,{"name":"status","qid":"21","text":"Status","type":"control_radio"},{"name":"whatIs","qid":"22","text":"What is the reason for your withdrawal?","type":"control_textarea"},null,{"name":"haveYou","qid":"24","text":"Have you already talked to your class adviser?","type":"control_radio"},null,{"name":"input26","qid":"26","text":"\nAll of the student's information can be found in the portal.\n\n\nWithdrawing during the first week in school will be eligible for refund.\n\n\nIf the student withdraws after the first week, fees will not be refunded.\n\n\nYou need to contact a financial aid prior to withdrawing from the school.\n","type":"control_text"},{"name":"typeA27","qid":"27","text":"Terms and Conditions","type":"control_widget"},{"name":"signature","qid":"28","text":"Signature","type":"control_signature"},{"name":"dateSigned","qid":"29","text":"Date Signed","type":"control_datetime"},{"name":"registrarsOffice","qid":"30","text":"Registrar's Office Use Only","type":"control_collapse"},{"name":"withdrawnBy","qid":"31","text":"Withdrawn By","type":"control_textbox"},{"name":"withdrawalDate","qid":"32","text":"Withdrawal Date","type":"control_datetime"},{"name":"areYou33","qid":"33","text":"Are you planning to return to the school in the future?","type":"control_radio"},{"name":"wouldYou","qid":"34","text":"Would you like to discuss your relationship to other students, teachers, or staff?","type":"control_radio"},{"name":"reminders","qid":"35","text":"Reminders","type":"control_head"}]);}, 20); 
+// </script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.42265&themeRevisionID=5f7ed99c2c2c7240ba580251"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.42265" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.42265" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.form-all {
+  font-family: "Inter", sans-serif;
+}
+.main .jotform-form {
+  width: 100%;
+  padding: 0 3%;
+}
+.form-all {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 752px;
+}
+.form-line-active {
+  background-color: #ffffe0;
+}
+.form-all {
+  font-size: 16px;
+}
+li.form-line {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.form-line {
+  padding: 12px 10px;
+}
+.form-section {
+  padding: 0px 38px;
+}
+.form-textbox,
+.form-textarea {
+  border-width: 2px;
+  width: 100% !important;
+  border-color: #f9bf8f;
+}
+.form-textbox,
+.form-textarea,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+  background-color: #fee9d7;
+}
+.form-label {
+  font-family: "Inter", sans-serif;
+}
+.form-line-column {
+  width: calc(50% - 8px);
+}
+.form-checkbox-item label,
+.form-checkbox-item span,
+.form-radio-item label,
+.form-radio-item span {
+  color: #533649;
+}
+.form-radio-item,
+.form-checkbox-item {
+  padding-bottom: 0px !important;
+}
+.form-radio-item:last-child,
+.form-checkbox-item:last-child {
+  padding-bottom: 0;
+}
+.form-single-column .form-checkbox-item,
+.form-single-column .form-radio-item {
+  width: 100%;
+}
+.form-checkbox-item .editor-container div,
+.form-radio-item .editor-container div {
+  position: relative;
+}
+.form-checkbox-item .editor-container div:before,
+.form-radio-item .editor-container div:before {
+  display: inline-block;
+  vertical-align: middle;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.form-radio-item:not(#foo),
+.form-checkbox-item:not(#foo) {
+  position: relative;
+}
+.form-radio-item:not(#foo) .form-radio + span:before,
+.form-checkbox-item:not(#foo) .form-radio + span:before,
+.form-radio-item:not(#foo) .form-radio + span:after,
+.form-checkbox-item:not(#foo) .form-radio + span:after,
+.form-radio-item:not(#foo) .form-radio:checked + span div:after,
+.form-checkbox-item:not(#foo) .form-radio:checked + span div:after,
+.form-radio-item:not(#foo) .form-checkbox + span:before,
+.form-checkbox-item:not(#foo) .form-checkbox + span:before,
+.form-radio-item:not(#foo) .form-checkbox + span:after,
+.form-checkbox-item:not(#foo) .form-checkbox + span:after {
+  display: none;
+}
+.form-radio-item:not(#foo) label:before,
+.form-checkbox-item:not(#foo) label:before {
+  background-color: transparent;
+  border: 2px solid #e2434b;
+}
+.form-radio-item:not(#foo) label:focus:before,
+.form-checkbox-item:not(#foo) label:focus:before {
+  border-color: #588ee6;
+}
+.form-radio-item:not(#foo) .form-radio:checked + label:after,
+.form-checkbox-item:not(#foo) .form-radio:checked + label:after,
+.form-radio-item:not(#foo) .form-checkbox:checked + label:after,
+.form-checkbox-item:not(#foo) .form-checkbox:checked + label:after {
+  background: none;
+  border-bottom: 3px solid #e2434b;
+  border-left: 3px solid #e2434b;
+  display: inline-block;
+  transform: rotate(-45deg) !important;
+  height: 9px;
+  width: 18px;
+  top: 0;
+  border-radius: 2px;
+}
+.form-radio-item:not(#foo) .form-radio-other,
+.form-radio-item:not(#foo) .form-checkbox-other {
+  display: inline-block;
+  margin-right: 13px;
+  margin-top: 0px;
+}
+.form-radio-item:not(#foo) .form-radio-item label,
+.form-radio-item:not(#foo) .form-radio-item label {
+  float: left;
+  margin-left: 0;
+  outline: none;
+}
+.form-radio-item:not(#foo) label:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 4px;
+  border-radius: 50%;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.form-radio-item:not(#foo) label:after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  display: inline-block;
+  top: 4px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+}
+.form-radio-item:not(#foo) input:checked + label:after {
+  opacity: 1;
+}
+.form-checkbox-item:not(#foo) .form-radio-other,
+.form-checkbox-item:not(#foo) .form-checkbox-other {
+  display: inline-block;
+  margin-right: 13px;
+  margin-top: 0px;
+}
+.form-checkbox-item:not(#foo) .form-radio-item label,
+.form-checkbox-item:not(#foo) .form-radio-item label {
+  float: left;
+  margin-left: 0;
+  outline: none;
+}
+.form-checkbox-item:not(#foo) label:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 4px;
+  border-radius: 2px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.form-checkbox-item:not(#foo) label:after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  display: inline-block;
+  top: 6px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+}
+.form-checkbox-item:not(#foo) input:checked + label:after {
+  opacity: 1;
+}
+.form-all .form-submit-button,
+.form-all .form-submit-print {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Inter", sans-serif;
+}
+.form-all .form-submit-button {
+  min-width: 180px;
+}
+.form-all .form-submit-button.js-new-sacl-button,
+.form-all .form-submit-print {
+  min-width: 98px;
+}
+.form-all .form-pagebreak-back,
+.form-all .form-pagebreak-next {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+.form-all .form-pagebreak-back,
+.form-all .form-pagebreak-next {
+  min-width: 128px;
+}
+li[data-type="control_image"] div {
+  text-align: left;
+}
+li[data-type="control_image"] img {
+  border: none;
+  border-width: 0px !important;
+  border-style: solid !important;
+  border-color: false !important;
+}
+.supernova {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-repeat: repeat;
+}
+.supernova {
+  background-image: none;
+}
+#stage {
+  background-image: none;
+}
+/* | */
+.form-all {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-repeat: repeat;
+}
+.form-header-group {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+}
+.header-large h1.form-header {
+  font-size: 2em;
+}
+.header-large h2.form-header {
+  font-size: 1.5em;
+}
+.header-large h3.form-header {
+  font-size: 1.17em;
+}
+.header-large h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-large h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-large h3 + .form-subHeader {
+  font-size: .75em;
+}
+.header-default h1.form-header {
+  font-size: 2em;
+}
+.header-default h2.form-header {
+  font-size: 1.5em;
+}
+.header-default h3.form-header {
+  font-size: 1.17em;
+}
+.header-default h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-default h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-default h3 + .form-subHeader {
+  font-size: .75em;
+}
+.header-small h1.form-header {
+  font-size: 2em;
+}
+.header-small h2.form-header {
+  font-size: 1.5em;
+}
+.header-small h3.form-header {
+  font-size: 1.17em;
+}
+.header-small h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-small h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-small h3 + .form-subHeader {
+  font-size: .75em;
+}
+.form-header-group {
+  text-align: left;
+}
+.form-header-group {
+  font-family: "Inter", sans-serif;
+}
+div.form-header-group.header-large {
+  margin: 0px -38px;
+}
+div.form-header-group.header-large {
+  padding: 40px 52px;
+}
+.form-header-group .form-header,
+.form-header-group .form-subHeader {
+  color: 0;
+}
+.form-header-group {
+  background-color;
+}
+.form-line-error {
+  overflow: hidden;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -ms-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #fff4f4;
+}
+.form-line-error .form-error-message {
+  background-color: #f23a3c;
+  clear: both;
+  float: none;
+}
+.form-line-error .form-error-message .form-error-arrow {
+  border-bottom-color: #f23a3c;
+}
+.form-line-error input:not(#coupon-input),
+.form-line-error textarea,
+.form-line-error .form-validation-error {
+  border: 1px solid #f23a3c;
+  box-shadow: 0 0 3px #f23a3c;
+}
+.supernova {
+  background-color: #ffffff;
+  background-color: #ecedf3;
+}
+.supernova body {
+  background-color: transparent;
+}
+.supernova .form-all,
+.form-all {
+  background-color: #ffffff;
+}
+.form-textbox,
+.form-textarea,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+  background-color: #fee9d7;
+}
+.form-matrix-table tr {
+  border-color: #e6e6e6;
+}
+.form-matrix-table tr:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+.form-all {
+  color: #34222e;
+}
+.form-label-top,
+.form-label-left,
+.form-label-right,
+.form-html {
+  color: #34222e;
+}
+.form-line-error {
+  overflow: hidden;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -ms-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #fff4f4;
+}
+.form-header-group .form-header,
+.form-header-group .form-subHeader {
+  color: 0;
+}
+
+/*__INSPECT_SEPERATOR__*/
+.form-all {
+    border : 5px solid #e2434b;
+}
+
+.form-label.form-label-auto {
+        
+        display: inline-block;
+        float: left;
+        text-align: left;
+      
+      }
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" action="https://submit.jotform.com/submit/231491575073458" method="post" name="form_231491575073458" id="231491575073458" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231491575073458" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div style="display:table;width:100%">
+          <div class="form-header-group hasImage header-large" data-imagealign="Right">
+            <div class="header-text httac htvam">
+              <h1 id="header_1" class="form-header" data-component="header">Withdrawal Form</h1>
+            </div>
+            <div class="header-logo"><img src="https://www.jotform.com/uploads/VanessaDavid/form_files/undraw_education_f8ru.60a7a8366a3769.01558958.png" alt="Withdrawal Form" width="210" class="header-logo-right" /></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_15"><label class="form-label form-label-left form-label-auto" id="label_15" for="first_15"> Name </label>
+        <div id="cid_15" class="form-input" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_15" name="q15_name[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_15 given-name" size="10" value="" data-component="first" aria-labelledby="label_15 sublabel_15_first" /><label class="form-sub-label" for="first_15" id="sublabel_15_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_15" name="q15_name[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_15 family-name" size="15" value="" data-component="last" aria-labelledby="label_15 sublabel_15_last" /><label class="form-sub-label" for="last_15" id="sublabel_15_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <!-- <li class="form-line" data-type="control_textbox" id="id_16"><label class="form-label form-label-left form-label-auto" id="label_16" for="input_16"> Student ID </label>
+        <div id="cid_16" class="form-input" data-layout="half"> <input type="text" id="input_16" name="q16_studentId" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_16" /> </div>
+      </li> -->
+      <li class="form-line" data-type="control_phone" id="id_17"><label class="form-label form-label-left form-label-auto" id="label_17" for="input_17_full"> Phone Number </label>
+        <div id="cid_17" class="form-input" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_17_full" name="q17_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_17 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_17 sublabel_17_masked" /><label class="form-sub-label" for="input_17_full" id="sublabel_17_masked" style="min-height:13px" aria-hidden="false">Please enter a valid phone number.</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_18"><label class="form-label form-label-left form-label-auto" id="label_18" for="input_18"> Email </label>
+        <div id="cid_18" class="form-input" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_18" name="q18_email" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" data-component="email" aria-labelledby="label_18 sublabel_input_18" /><label class="form-sub-label" for="input_18" id="sublabel_input_18" style="min-height:13px" aria-hidden="false">example@example.com</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_19"><label class="form-label form-label-left form-label-auto" id="label_19" for="input_19_addr_line1"> Address </label>
+        <div id="cid_19" class="form-input" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_19_addr_line1" name="q19_address[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_19 address-line1" value="" data-component="address_line_1" aria-labelledby="label_19 sublabel_19_addr_line1" required="" /><label class="form-sub-label" for="input_19_addr_line1" id="sublabel_19_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_19_addr_line2" name="q19_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_19 address-line2" value="" data-component="address_line_2" aria-labelledby="label_19 sublabel_19_addr_line2" /><label class="form-sub-label" for="input_19_addr_line2" id="sublabel_19_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_19_city" name="q19_address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_19 address-level2" value="" data-component="city" aria-labelledby="label_19 sublabel_19_city" required="" /><label class="form-sub-label" for="input_19_city" id="sublabel_19_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_19_state" name="q19_address[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_19 address-level1" value="" data-component="state" aria-labelledby="label_19 sublabel_19_state" required="" /><label class="form-sub-label" for="input_19_state" id="sublabel_19_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_19_postal" name="q19_address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_19 postal-code" value="" data-component="zip" aria-labelledby="label_19 sublabel_19_postal" required="" /><label class="form-sub-label" for="input_19_postal" id="sublabel_19_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="form-line" data-type="control_widget" id="id_10"><label class="form-label form-label-top form-label-auto" id="label_10" for="input_10"> Total Amount (Rs) </label>
+        <div id="cid_10" class="form-input-wide" data-layout="full">
+          <div data-widget-name="Masked Input" style="width:100%;text-align:Left;overflow-x:auto" data-component="widget-field">
+            <iframe data-client-id="53831901bbbeaf3d0300000e" title="Masked Input" frameBorder="0" scrolling="no" allowtransparency="true" allow="geolocation; microphone; camera; autoplay; encrypted-media; fullscreen" data-type="iframe" class="custom-field-frame" id="customFieldFrame_10" src="" style="max-width:178px;border:none;width:100%;height:24px" data-width="178" data-height="24"></iframe>
+            <div class="widget-inputs-wrapper">
+              <input type="hidden" id="input_10" class="form-hidden form-widget  " name="q10_totalAmount10" value="" />
+              <input type="hidden" id="widget_settings_10" class="form-hidden form-widget-settings" value="%5B%7B%22name%22%3A%22precision%22%2C%22value%22%3A%222%22%7D%2C%7B%22name%22%3A%22separator%22%2C%22value%22%3A%22.%22%7D%2C%7B%22name%22%3A%22delimiter%22%2C%22value%22%3A%22%2C%22%7D%2C%7B%22name%22%3A%22convertToInt%22%2C%22value%22%3A%22Yes%22%7D%2C%7B%22name%22%3A%22unit%22%2C%22value%22%3A%22%24%22%7D%5D" data-version="2" /></div>
+     
+      <li class="form-line jf-required" data-type="control_widget" id="id_27">
+        <div id="cid_27" class="form-input termsAndConditionsV2 jf-required" data-layout="full">
+          <div data-widget-name="Terms &amp;amp; Conditions" style="width:100%;text-align:Left;overflow-x:auto" data-component="widget-field">
+            <iframe data-client-id="52948fb29322cd302b00000c" title="Terms &amp;amp; Conditions" frameBorder="0" scrolling="no" allowtransparency="true" allow="geolocation; microphone; camera; autoplay; encrypted-media; fullscreen" data-type="iframe" class="custom-field-frame" id="customFieldFrame_27" src="" style="max-width:580px;border:none;width:100%;height:50px" data-width="580" data-height="50"></iframe>
+            <div class="widget-inputs-wrapper"><input type="hidden" id="input_27" class="form-hidden form-widget widget-required " name="q27_typeA27" value="" /><input type="hidden" id="widget_settings_27" class="form-hidden form-widget-settings" value="%5B%7B%22name%22%3A%22termsText%22%2C%22value%22%3A%22I%20have%20read%20and%20understand%20the%20information%20in%20this%20form.%22%7D%2C%7B%22name%22%3A%22theme%22%2C%22value%22%3A%22default%22%7D%2C%7B%22name%22%3A%22acceptedText%22%2C%22value%22%3A%22Accepted%22%7D%5D" data-version="2" /></div>
+            <script type="text/javascript">
+              setTimeout(function()
+              {
+                var _cFieldFrame = document.getElementById("customFieldFrame_27");
+                if (_cFieldFrame)
+                {
+                  _cFieldFrame.onload = function()
+                  {
+                    if (typeof widgetFrameLoaded !== 'undefined')
+                    {
+                      widgetFrameLoaded(27,
+                      {
+                        "formID": 231491575073458
+                      })
+                    }
+                  };
+                  _cFieldFrame.src = "//app-widgets.jotform.io/termsConditions/?qid=27&ref=" +
+                    encodeURIComponent(window.location.protocol + "//" + window.location.host) + '&ndt=1' + '' + '' +
+                    '&injectCSS=' + encodeURIComponent(window.location.search.indexOf("ndt=1") > -1);
+                  _cFieldFrame.addClassName("custom-field-frame-rendered");
+                }
+              }, 0);
+            </script>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_signature" id="id_28"><label class="form-label form-label-left form-label-auto" id="label_28" for="input_28"> Signature </label>
+        <div id="cid_28" class="form-input" data-layout="half">
+          <div data-wrapper-react="true">
+            <div id="signature_pad_28" class="signature-pad-wrapper" style="width:312px;height:116px">
+              <div data-wrapper-react="true">
+                <!--[if IE 7]><script type="text/javascript" src="/js/vendor/json2.js"></script><![endif]-->
+              </div>
+              <div class="signature-line signature-wrapper signature-placeholder" data-component="signature" style="width:312px;height:116px;position:relative">
+                <div id="sig_pad_28" data-width="310" data-height="114" data-id="28" data-required="false" class="pad " aria-labelledby="label_28"></div><input type="hidden" name="q28_signature" class="output4" id="input_28" />
+              </div>
+              <!-- <a style="margin-top:2px;font-size:10px;color:inherit;text-decoration:none;float:left" href="https://www.jotform.com/products/sign?utm_source=sign_cardform&amp;utm_content=form&amp;utm_medium=button&amp;utm_campaign=sign_form_integration" target="_blank">Powered by <b style="color:#7BB60F">Jotform Sign</b></a> <span class="clear-pad-btn clear-pad" role="button" tabindex="0">Clear</span> -->
+            </div>
+            <div data-wrapper-react="true">
+              <script type="text/javascript">
+                window.signatureForm = true
+              </script>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_datetime" id="id_29"><label class="form-label form-label-left form-label-auto" id="label_29" for="lite_mode_29"> Date Signed </label>
+        <div id="cid_29" class="form-input" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_29" name="q29_dateSigned[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_29 sublabel_29_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_29" id="sublabel_29_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_29" name="q29_dateSigned[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_29 sublabel_29_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_29" id="sublabel_29_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_29" name="q29_dateSigned[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_29 sublabel_29_year" /><label class="form-sub-label" for="year_29" id="sublabel_29_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_29" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_29 sublabel_29_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_29_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_29" id="sublabel_29_litemode" style="min-height:13px" aria-hidden="false">Date</label></span>
+          </div>
+        </div>
+      </li>
+      <ul class="form-section-closed" style="height: 84px;clear:both;" id="section_30">
+        <li id="cid_30" class="form-input-wide" data-type="control_collapse">
+          <div class="form-collapse-table" id="collapse_30" data-component="collapse"><span class="form-collapse-mid" id="collapse-text_30">Registrar's Office Use Only</span><span class="form-collapse-right form-collapse-right-hide"> </span></div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_31"><label class="form-label form-label-left form-label-auto" id="label_31" for="input_31"> Withdrawn By </label>
+          <div id="cid_31" class="form-input" data-layout="half"> <input type="text" id="input_31" name="q31_withdrawnBy" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_31" /> </div>
+        </li>
+        <li class="form-line" data-type="control_datetime" id="id_32"><label class="form-label form-label-left form-label-auto" id="label_32" for="lite_mode_32"> Withdrawal Date </label>
+          <div id="cid_32" class="form-input" data-layout="half">
+            <div data-wrapper-react="true">
+              <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_32" name="q32_withdrawalDate[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_32 sublabel_32_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_32" id="sublabel_32_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_32" name="q32_withdrawalDate[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_32 sublabel_32_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_32" id="sublabel_32_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_32" name="q32_withdrawalDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_32 sublabel_32_year" /><label class="form-sub-label" for="year_32" id="sublabel_32_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_32" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_32 sublabel_32_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_32_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_32" id="sublabel_32_litemode" style="min-height:13px" aria-hidden="false">Date</label></span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_button" id="id_2">
+          <div id="cid_2" class="form-input-wide" data-layout="full">
+            <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+              <button id="input_2" style="display:none !important" type="button" class="form-submit-button form-submit-button-simple_rose submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button><button type="button" class="form-submit-button form-submit-button-simple_rose submit-button jf-form-buttons jsTest-submitField  useJotformSign-button useJotformSign " data-component="button" data-content="">Submit</button></div>
+          </div>
+        </li>
+        <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+      </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Powered by Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="231491575073458" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='231491575073458'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "231491575073458-231491575073458";
+    }
+  </script>
+  
+</form><script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.42265"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.42265"></script>
